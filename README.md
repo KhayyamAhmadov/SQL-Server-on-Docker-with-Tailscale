@@ -1,5 +1,5 @@
 # SQL Server on Docker with Tailscale - Complete Setup Guide
-### Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tailscale ilə müxtəlif şəbəkələrdən təhlükəsiz qoşulma prosesini əhatə edir.
+### Bu sənəd Ubuntu üzərində Docker konteynerində SQL Server-in quraşdırılması və Tailscale vasitəsilə müxtəlif şəbəkələrdən təhlükəsiz şəkildə qoşulma prosesini izah edir. Mobil cihazlardan qoşulmaq da mümkündür.
 
 ![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-orange)
 ![Docker](https://img.shields.io/badge/Docker-Containerization-lightblue)
@@ -8,14 +8,15 @@
 
 ## 📋 İçindəkilər:
 
-1. **Tələblər**
-2. **Docker Quraşdırılması**
-3. **SQL Server Konteynerinin Yaradılması**
-4. **Tailscale Quraşdırılması**
-5. **SQL Server İstifadəçi İdarəetməsi**
-6. **Qoşulma və Test**
-7. **Faydalı Əmrlər**
-
+1. **[Tələblər](## Tələblər)**
+2. **[Docker Quraşdırılması](## Docker Quraşdırılması)**
+3. **[SQL Server Konteynerinin Yaradılması](## SQL Server Konteynerinin Yaradılması)**
+4. **[Tailscale Quraşdırılması](## Tailscale Quraşdırılması)**
+5. **[SQL Server İstifadəçi İdarəetməsi](## SQL Server İstifadəçi İdarəetməsi)**
+6. **[Qoşulma və Test](## Qoşulma və Test)**
+7. **[Faydalı Əmrlər](## Faydalı Əmrlər)**
+8. **[Təhlükəsizlik Tövsiyələri](## Təhlükəsizlik Tövsiyələri)**
+9. **[Əlavə Resurslar](## Əlavə Resurslar)**
 
 ## Tələblər
 
@@ -220,7 +221,7 @@ sudo apt install mssql-tools unixodbc-dev
 
 - **Yuxarıdakı SQL əmrlərini çalışdırın**
 
-## **Qoşulma və Test**
+## Qoşulma və Test
 **Eyni Şəbəkədən (Eyni Wi-Fi/LAN)**
 **Qoşulma məlumatları:**
 
@@ -335,7 +336,7 @@ sudo tailscale down
 ### Backup və Restore
 **Backup**
 
--- Database backup
+- Database backup
 ```bash
 BACKUP DATABASE TestDB 
 TO DISK = '/var/opt/mssql/data/TestDB.bak'
@@ -444,8 +445,8 @@ GO
 
 ## Müəllif
 
-Müəllif: Xəyyam Əhmədov [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov) 
+**Müəllif: Xəyyam Əhmədov [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov)**
 
-Dekabr 2024
+**Dekabr 2025**
 
-Versiya: 1.0
+**Versiya: 1.0**
