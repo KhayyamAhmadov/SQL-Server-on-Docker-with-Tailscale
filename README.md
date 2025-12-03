@@ -8,32 +8,22 @@ Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tai
 
 ## 📋 İçindəkilər:
 
-**1. Tələblər**
-
-**2. Docker Quraşdırılması**
-
-**3. SQL Server Konteynerinin Yaradılması**
-
-**4. Tailscale Quraşdırılması**
-
-**5. SQL Server İstifadəçi İdarəetməsi**
-
-**6. Qoşulma və Test**
-
-**7. Faydalı Əmrlər**
+1. **Tələblər**
+2. **Docker Quraşdırılması**
+3. **SQL Server Konteynerinin Yaradılması**
+4. **Tailscale Quraşdırılması**
+5. **SQL Server İstifadəçi İdarəetməsi**
+6. **Qoşulma və Test**
+7. **Faydalı Əmrlər**
 
 
 ## Tələblər
 
-**- Ubuntu 20.04 və ya daha yeni versiya**
-
-**- Minimum 2GB RAM**
-
-**- 10GB boş disk sahəsi**
-
-**- İnternet bağlantısı**
-
-**- sudo icazələri**
+- **Ubuntu 20.04 və ya daha yeni versiya**
+- **Minimum 2GB RAM**
+- **10GB boş disk sahəsi**
+- **İnternet bağlantısı**
+- **sudo icazələri**
 
 
 ## Docker Quraşdırılması
