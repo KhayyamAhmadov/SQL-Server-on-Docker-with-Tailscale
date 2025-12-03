@@ -375,26 +375,35 @@ GO
 
 ## Təhlükəsizlik Tövsiyələri
 
-**✅ Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)**
-**✅ sa istifadəçisi əvəzinə fərqli istifadəçilər yaradın**
-**✅ Firewall konfiqurasiyasını düzgün təyin edin**
-**✅ Mütəmadi backup alın**
-**✅ SQL Server-i güncel saxlayın**
-**✅ Tailscale istifadə edərək internetdən birbaşa port açmayın**
+✅ **Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)**
+✅ **sa istifadəçisi əvəzinə fərqli istifadəçilər yaradın**
+✅ **Firewall konfiqurasiyasını düzgün təyin edin**
+✅ **Mütəmadi backup alın**
+✅ **SQL Server-i güncel saxlayın**
+✅ **Tailscale istifadə edərək internetdən birbaşa port açmayın**
 
 
 ## Əlavə Resurslar
 
 [Linux Ubuntu Desktop](https://ubuntu.com/desktop)
+
 [Linux Ubuntu Server](https://ubuntu.com/server)
+
 [Docker Documentation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
 [SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server)
+
 [Tailscale Documentation](https://tailscale.com/kb/1017/install)
+
 [SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
 
 
 
+
 Müəllif: Xəyyam Əhmədov
+
 [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov) 
+
 Tarix: Dekabr 2024
+
 Versiya: 1.0
