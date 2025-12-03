@@ -8,15 +8,15 @@
 
 ## 📋 İçindəkilər:
 
-1. **[Tələblər](## Tələblər)**
-2. **[Docker Quraşdırılması](## Docker Quraşdırılması)**
-3. **[SQL Server Konteynerinin Yaradılması](## SQL Server Konteynerinin Yaradılması)**
-4. **[Tailscale Quraşdırılması](## Tailscale Quraşdırılması)**
-5. **[SQL Server İstifadəçi İdarəetməsi](## SQL Server İstifadəçi İdarəetməsi)**
-6. **[Qoşulma və Test](## Qoşulma və Test)**
-7. **[Faydalı Əmrlər](## Faydalı Əmrlər)**
-8. **[Təhlükəsizlik Tövsiyələri](## Təhlükəsizlik Tövsiyələri)**
-9. **[Əlavə Resurslar](## Əlavə Resurslar)**
+1. **[Tələblər](#tələblər)**
+2. **[Docker Quraşdırılması](#docker-quraşdırılması)**
+3. **[SQL Server Konteynerinin Yaradılması](#sql-server-konteynerinin-yaradılması)**
+4. **[Tailscale Quraşdırılması](#tailscale-quraşdırılması)**
+5. **[SQL Server İstifadəçi İdarəetməsi](#sql-server-i̇stifadəçi-i̇darəetməsi)**
+6. **[Qoşulma və Test](#qoşulma-və-test)**
+7. **[Faydalı Əmrlər](#faydalı-əmrlər)**
+8. **[Təhlükəsizlik Tövsiyələri](#təhlükəsizlik-tövsiyələri)**
+9. **[Əlavə Resurslar](#əlavə-resurslar)**
 
 ## Tələblər
 
