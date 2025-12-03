@@ -1,5 +1,5 @@
 # SQL Server on Docker with Tailscale - Complete Setup Guide
-Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tailscale ilə hər yerdən təhlükəsiz qoşulma prosesinı əhatə edir.
+### Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tailscale ilə müxtəlif şəbəkələrdən (hər yerdən) təhlükəsiz qoşulma prosesinı əhatə edir.
 
 ![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-orange)
 ![Docker](https://img.shields.io/badge/Docker-Containerization-lightblue)
@@ -269,7 +269,7 @@ GO
 ```
 
 ## Faydalı Əmrlər
-**Docker Compose əmrləri** 
+### Docker Compose əmrləri 
 - Konteyneri işə salmaq
 ```bash
 sudo docker compose up -d
