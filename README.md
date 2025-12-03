@@ -9,11 +9,17 @@ Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tai
 ## 📋 İçindəkilər:
 
 **1. Tələblər**
+
 **2. Docker Quraşdırılması**
+
 **3. SQL Server Konteynerinin Yaradılması**
+
 **4. Tailscale Quraşdırılması**
+
 **5. SQL Server İstifadəçi İdarəetməsi**
+
 **6. Qoşulma və Test**
+
 **7. Faydalı Əmrlər**
 
 
@@ -53,14 +59,18 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 ```
 
 **3. Docker-in işlədiyini yoxlayın**
+- Status yoxlayın
 ```bash
-# Status yoxlayın
 sudo systemctl status docker
+```
 
-# Lazım gələrsə işə salın
+- Lazım gələrsə işə salın
+```bash
 sudo systemctl start docker
+```
 
-# Test edin
+- Test edin
+```bash
 sudo docker run hello-world
 ```
 
