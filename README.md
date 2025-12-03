@@ -442,6 +442,7 @@ GO
 
 
 
+## Müəllif
 
 Müəllif: Xəyyam Əhmədov
 
