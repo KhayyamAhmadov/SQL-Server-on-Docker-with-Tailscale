@@ -26,9 +26,13 @@ Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tai
 ## Tələblər
 
 **- Ubuntu 20.04 və ya daha yeni versiya**
+
 **- Minimum 2GB RAM**
+
 **- 10GB boş disk sahəsi**
+
 **- İnternet bağlantısı**
+
 **- sudo icazələri**
 
 
@@ -83,7 +87,7 @@ sudo docker run hello-world
 mkdir -p ~/sql-server
 cd ~/sql-server
 ```
-docker-compose.yml faylı yaradın:
+- docker-compose.yml faylı yaradın:
 
 ```bash
 nano docker-compose.yml
@@ -132,29 +136,32 @@ sudo docker compose ps
 sudo docker compose logs -f sqlserver
 ```
 
-"SQL Server is now ready for client connections" mesajını gözləyin (10-20 saniyə).
+- "SQL Server is now ready for client connections" mesajını gözləyin (10-20 saniyə).
 
 ## Tailscale Quraşdırılması
 
-Tailscale fərqli şəbəkələrdən təhlükəsiz qoşulma üçün istifadə olunur.
+- Tailscale fərqli şəbəkələrdən təhlükəsiz qoşulma üçün istifadə olunur.
 
 **1. Ubuntu-da (SQL Server VM)**
+
+- Tailscale quraşdırın
 ```bash
-#Tailscale quraşdırın
 curl -fsSL https://tailscale.com/install.sh | sh
-
-# İşə salın
-sudo tailscale up
-
-# IP ünvanını öyrənin
-tailscale ip -4
-IP ünvanını qeyd edin (məsələn: 100.64.x.x)
 ```
+- İşə salın
+```bash
+sudo tailscale up
+```
+- IP ünvanını öyrənin
+```bash
+tailscale ip -4
+```
+- IP ünvanını qeyd edin (məsələn: 100.64.x.x)
 
 **2. Digər cihazlarda**
-Windows / Mac / Linux:
+- Windows / Mac / Linux:
 
-https://tailscale.com/download saytından yükləyin
+[Tailscale](https://tailscale.com/download) saytından yükləyin
 Quraşdırın və eyni hesabla giriş edin
 
 Android / iOS:
@@ -168,7 +175,7 @@ SQL Server Management Studio (SSMS) ilə
 
 SSMS-də qoşulun:
 
-Server: localhost (lokal) və ya Tailscale IP
+**Server: localhost (lokal) və ya Tailscale IP
 Authentication: SQL Server Authentication
 Username: sa
 Password: docker-compose.yml-də təyin etdiyiniz şifrə
@@ -317,37 +324,54 @@ FROM DISK = '/var/opt/mssql/data/TestDB.bak'
 WITH REPLACE;
 GO
 
-Firewall Konfiqurasiyası (Lazım olsa)
-bash# UFW ilə port 1433-ü açın
+## Firewall Konfiqurasiyası (Lazım olsa)
+- UFW ilə port 1433-ü açın
+```bash
 sudo ufw allow 1433/tcp
 sudo ufw reload
-
-# UFW statusunu yoxlayın
+```
+- UFW statusunu yoxlayın
+```bash
 sudo ufw status
+```
 
-Problemlərin Həlli
-Container işləmir
-bash# Logları yoxlayın
+# Problemlərin Həlli
+## Container işləmir
+ 
+- Logları yoxlayın
+```bash
 sudo docker compose logs sqlserver
+```
 
-# Yenidən başladın
+- Yenidən başladın
+```bash
 sudo docker compose restart
-Qoşulma problemi
+```
+## Qoşulma problemi
 
-Firewall yoxlayın:
+1. **Firewall yoxlayın:**
 
-bash   sudo ufw status
+```bash   
+sudo ufw status
+```
 
-SQL Server hazırdırmı:
+2. **SQL Server hazırdırmı:**
 
-bash   sudo docker compose logs -f sqlserver | grep "ready"
+```bash   
+sudo docker compose logs -f sqlserver | grep "ready"
+```
 
-Port açıqdırmı:
+3. **Port açıqdırmı:**
 
-bash   sudo netstat -tulpn | grep 1433
-Şifrə dəyişmək
-sqlALTER LOGIN sa WITH PASSWORD = 'NewStrong@Password456';
+```bash   
+sudo netstat -tulpn | grep 1433
+```
+
+## Şifrə dəyişmək
+```bash
+ALTER LOGIN sa WITH PASSWORD = 'NewStrong@Password456';
 GO
+```
 
 ## Təhlükəsizlik Tövsiyələri
 
