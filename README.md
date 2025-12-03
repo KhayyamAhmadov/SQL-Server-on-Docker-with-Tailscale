@@ -444,10 +444,8 @@ GO
 
 ## Müəllif
 
-Müəllif: Xəyyam Əhmədov
+Müəllif: Xəyyam Əhmədov [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov) 
 
-[Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov) 
-
-Tarix: Dekabr 2024
+Dekabr 2024
 
 Versiya: 1.0
