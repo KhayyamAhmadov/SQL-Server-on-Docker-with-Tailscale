@@ -8,22 +8,22 @@ Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tai
 
 ## 📋 İçindəkilər:
 
-1. Tələblər
-2. Docker Quraşdırılması
-3. SQL Server Konteynerinin Yaradılması
-4. Tailscale Quraşdırılması
-5. SQL Server İstifadəçi İdarəetməsi
-6. Qoşulma və Test
-7. Faydalı Əmrlər
+1. **Tələblər**
+2. **Docker Quraşdırılması**
+3. **SQL Server Konteynerinin Yaradılması**
+4. **Tailscale Quraşdırılması**
+5. **SQL Server İstifadəçi İdarəetməsi**
+6. **Qoşulma və Test**
+7. **Faydalı Əmrlər**
 
 
 ## Tələblər
 
-- Ubuntu 20.04 və ya daha yeni versiya
-- Minimum 2GB RAM
-- 10GB boş disk sahəsi
-- İnternet bağlantısı
-- sudo icazələri
+- **Ubuntu 20.04 və ya daha yeni versiya**
+- **Minimum 2GB RAM**
+- **10GB boş disk sahəsi**
+- **İnternet bağlantısı**
+- **sudo icazələri**
 
 
 ## Docker Quraşdırılması
@@ -66,7 +66,7 @@ sudo docker run hello-world
 
 ## SQL Server Konteynerinin Yaradılması
 
-1. Docker Compose faylı yaradın
+**1. Docker Compose faylı yaradın**
 
 Layihə qovluğu yaradın:
 ```bash
@@ -108,12 +108,12 @@ networks:
 
 ⚠️ Vacib: SA_PASSWORD dəyərini güclü şifrə ilə dəyişdirin!
 
-2. Konteyneri işə salın
+**2. Konteyneri işə salın**
 ```bash
 sudo docker compose up -d
 ```
 
-3. SQL Server-in hazır olduğunu yoxlayın
+**3. SQL Server-in hazır olduğunu yoxlayın**
 ```bash
 # Statusu yoxlayın
 sudo docker compose ps
@@ -128,7 +128,7 @@ sudo docker compose logs -f sqlserver
 
 Tailscale fərqli şəbəkələrdən təhlükəsiz qoşulma üçün istifadə olunur.
 
-1. Ubuntu-da (SQL Server VM) 
+**1. Ubuntu-da (SQL Server VM)**
 ```bash
 #Tailscale quraşdırın
 curl -fsSL https://tailscale.com/install.sh | sh
@@ -141,7 +141,7 @@ tailscale ip -4
 IP ünvanını qeyd edin (məsələn: 100.64.x.x)
 ```
 
-2. Digər cihazlarda
+**2. Digər cihazlarda**
 Windows / Mac / Linux:
 
 https://tailscale.com/download saytından yükləyin
