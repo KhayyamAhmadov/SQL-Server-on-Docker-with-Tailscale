@@ -149,50 +149,51 @@ tailscale ip -4
 - IP ünvanını qeyd edin (məsələn: 100.64.x.x)
 
 **2. Digər cihazlarda**
-- Windows / Mac / Linux:
+**Windows / Mac / Linux:**
 
-[Tailscale](https://tailscale.com/download) saytından yükləyin
-Quraşdırın və eyni hesabla giriş edin
+1. [Tailscale](https://tailscale.com/download) saytından yükləyin
+2. Quraşdırın və eyni hesabla giriş edin
 
-Android / iOS:
+**Android / iOS:**
 
-App Store və ya Google Play-dən Tailscale yükləyin
-Eyni hesabla giriş edin
-
-
-SQL Server İstifadəçi İdarəetməsi
-SQL Server Management Studio (SSMS) ilə
-
-SSMS-də qoşulun:
-
-**Server: localhost (lokal) və ya Tailscale IP
-Authentication: SQL Server Authentication
-Username: sa
-Password: docker-compose.yml-də təyin etdiyiniz şifrə
+1. App Store və ya Google Play-dən Tailscale yükləyin
+2. Eyni hesabla giriş edin
 
 
-New Query açın və aşağıdakı SQL-i çalışdırın:
+## SQL Server İstifadəçi İdarəetməsi
+**SQL Server Management Studio (SSMS) ilə**
 
-sql-- Yeni istifadəçi yaradın
-CREATE LOGIN khayyam WITH PASSWORD = 'Khayyam@2025!Strong';
+1. **SSMS-də qoşulun:**
+
+- Server: localhost (lokal) və ya Tailscale IP
+- Authentication: SQL Server Authentication
+- Username: sa
+- Password: docker-compose.yml-də təyin etdiyiniz şifrə
+
+
+2. **New Query açın və aşağıdakı SQL-i çalışdırın:**
+
+```bash
+-- Yeni istifadəçi yaradın
+CREATE LOGIN username WITH PASSWORD = 'YourStrong@Password123';
 GO
 
 -- Sysadmin icazəsi verin (tam icazə)
-ALTER SERVER ROLE sysadmin ADD MEMBER khayyam;
+ALTER SERVER ROLE sysadmin ADD MEMBER username;
 GO
 
 -- Master database
 USE master;
 GO
-CREATE USER khayyam FOR LOGIN khayyam;
+CREATE USER username FOR LOGIN username;
 GO
 
 -- AdventureWorks2022 (əgər varsa)
 USE AdventureWorks2022;
 GO
-CREATE USER khayyam FOR LOGIN khayyam;
+CREATE USER usernmae FOR LOGIN username;
 GO
-ALTER ROLE db_owner ADD MEMBER khayyam;
+ALTER ROLE db_owner ADD MEMBER username;
 GO
 
 -- İcazələri yoxlayın
@@ -202,36 +203,43 @@ SELECT
 FROM sys.server_role_members srm
 JOIN sys.server_principals p ON srm.member_principal_id = p.principal_id
 JOIN sys.server_principals r ON srm.role_principal_id = r.principal_id
-WHERE p.name = 'khayyam';
+WHERE p.name = 'username';
 GO
-Terminaldan (sqlcmd ilə)
-bash# sqlcmd quraşdırın
+```
+
+- **Terminaldan (sqlcmd ilə)**
+```bash
+sqlcmd quraşdırın
 sudo apt install mssql-tools unixodbc-dev
+``` 
 
 # SQL Server-ə qoşulun
+```bash
 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Password123'
+```
 
-# Yuxarıdakı SQL əmrlərini çalışdırın
+- **Yuxarıdakı SQL əmrlərini çalışdırın**
 
-Qoşulma və Test
-Eyni Şəbəkədən (Eyni Wi-Fi/LAN)
-Qoşulma məlumatları:
+## **Qoşulma və Test**
+**Eyni Şəbəkədən (Eyni Wi-Fi/LAN)**
+**Qoşulma məlumatları:**
 
-Host: Ubuntu VM-in lokal IP-si (məsələn: 192.168.1.100)
-Port: 1433
-Username: khayyam və ya sa
-Password: təyin etdiyiniz şifrə
+- Host: Ubuntu VM-in lokal IP-si (məsələn: 192.168.1.100)
+- Port: 1433
+- Username: username və ya sa
+- Password: təyin etdiyiniz şifrə
 
-Fərqli Şəbəkədən (Tailscale ilə)
-Qoşulma məlumatları:
+- **Fərqli Şəbəkədən (Tailscale ilə)**
+**Qoşulma məlumatları:**
 
-Host: Tailscale IP (məsələn: 100.64.x.x)
-Port: 1433
-Username: khayyam və ya sa
-Password: təyin etdiyiniz şifrə
+- Host: Tailscale IP (məsələn: 100.64.x.x)
+- Port: 1433
+- Username: username və ya sa
+- Password: təyin etdiyiniz şifrə
 
-Test sorğuları
-sql-- Database-ləri siyahıya alın
+**Test sorğuları**
+```bash
+-- Database-ləri siyahıya alın
 SELECT name FROM sys.databases;
 GO
 
@@ -258,61 +266,101 @@ GO
 -- Data oxuyun
 SELECT * FROM Users;
 GO
+```
 
-Faydalı Əmrlər
-Docker Compose əmrləri
-bash# Konteyneri işə salın
+## Faydalı Əmrlər
+**Docker Compose əmrləri** 
+- Konteyneri işə salmaq
+```bash
 sudo docker compose up -d
+``` 
 
-# Dayanın
+- Dayandırmaq
+```bash
 sudo docker compose down
+```
 
-# Yenidən başladın
+- Yenidən başlatmaq
+```bash
 sudo docker compose restart
+``` 
 
-# Statusu yoxlayın
+-  Statusu yoxlayın
+```bash
 sudo docker compose ps
+```
 
-# Logları görün
+- Logları görün
+```bash
 sudo docker compose logs -f sqlserver
+```
 
-# Container-ə daxil olun
+- Container-ə daxil olun
+```bash
 sudo docker exec -it sqlserver /bin/bash
-SQL Server əmrləri (Container içində)
-bash# sqlcmd ilə qoşulun
+```
+
+### SQL Server əmrləri (Container içində)
+- **sqlcmd ilə qoşulun**
+```bash
 sudo docker exec -it sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Password123'
+```
 
-# Database-ləri görün (birbaşa)
+- **Database-ləri görün (birbaşa)**
+```bash
 sudo docker exec -it sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Password123' -Q "SELECT name FROM sys.databases;"
-Tailscale əmrləri
-bash# Status yoxlayın
+```
+
+### Tailscale əmrləri
+- Status yoxlayın
+```bash
 tailscale status
+```
 
-# IP ünvanını görün
+- IP ünvanını görün
+```bash
 tailscale ip -4
+```
 
-# Yenidən qoşulun
+- Yenidən qoşulun
+```bash
 sudo tailscale up
+```
 
-# Çıxış edin
+- Çıxış edin
+```bash
 sudo tailscale down
-Backup və Restore
-Backup
-sql-- Database backup
+```
+
+### Backup və Restore
+**Backup**
+
+-- Database backup
+```bash
 BACKUP DATABASE TestDB 
 TO DISK = '/var/opt/mssql/data/TestDB.bak'
 WITH FORMAT, COMPRESSION;
 GO
-bash# Backup faylını çıxarın
+```
+
+- Backup faylını çıxarın
+```bash
 sudo docker cp sqlserver:/var/opt/mssql/data/TestDB.bak ~/TestDB.bak
-Restore
-bash# Backup faylını konteynerə köçürün
+```
+
+### Restore
+- Backup faylını konteynerə köçürün
+```bash
 sudo docker cp ~/TestDB.bak sqlserver:/var/opt/mssql/data/
-sql-- Database restore
+```
+
+- Database restore
+```bash
 RESTORE DATABASE TestDB
 FROM DISK = '/var/opt/mssql/data/TestDB.bak'
 WITH REPLACE;
 GO
+```
 
 ## Firewall Konfiqurasiyası (Lazım olsa)
 - UFW ilə port 1433-ü açın
@@ -366,10 +414,15 @@ GO
 ## Təhlükəsizlik Tövsiyələri
 
 ✅ **Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)**
+
 ✅ **sa istifadəçisi əvəzinə fərqli istifadəçilər yaradın**
+
 ✅ **Firewall konfiqurasiyasını düzgün təyin edin**
+
 ✅ **Mütəmadi backup alın**
+
 ✅ **SQL Server-i güncel saxlayın**
+
 ✅ **Tailscale istifadə edərək internetdən birbaşa port açmayın**
 
 
