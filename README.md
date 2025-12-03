@@ -8,27 +8,27 @@ Bu sənəd Ubuntu-da Docker konteynerində SQL Server quraşdırılması və Tai
 
 ## 📋 İçindəkilər:
 
-1. **Tələblər**
-2. **Docker Quraşdırılması**
-3. **SQL Server Konteynerinin Yaradılması**
-4. **Tailscale Quraşdırılması**
-5. **SQL Server İstifadəçi İdarəetməsi**
-6. **Qoşulma və Test**
-7. **Faydalı Əmrlər**
+**1. Tələblər**
+**2. Docker Quraşdırılması**
+**3. SQL Server Konteynerinin Yaradılması**
+**4. Tailscale Quraşdırılması**
+**5. SQL Server İstifadəçi İdarəetməsi**
+**6. Qoşulma və Test**
+**7. Faydalı Əmrlər**
 
 
 ## Tələblər
 
-- **Ubuntu 20.04 və ya daha yeni versiya**
-- **Minimum 2GB RAM**
-- **10GB boş disk sahəsi**
-- **İnternet bağlantısı**
-- **sudo icazələri**
+**- Ubuntu 20.04 və ya daha yeni versiya**
+**- Minimum 2GB RAM**
+**- 10GB boş disk sahəsi**
+**- İnternet bağlantısı**
+**- sudo icazələri**
 
 
 ## Docker Quraşdırılması
 
-1. Docker APT repository quraşdırın
+**1. Docker APT repository quraşdırın**
 ```bash
 sudo apt update
 sudo apt install ca-certificates curl
@@ -47,12 +47,12 @@ EOF
 sudo apt update
 ```
 
-2. Docker paketlərini quraşdırın
+**2. Docker paketlərini quraşdırın**
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-3. Docker-in işlədiyini yoxlayın
+**3. Docker-in işlədiyini yoxlayın**
 ```bash
 # Status yoxlayın
 sudo systemctl status docker
@@ -68,7 +68,7 @@ sudo docker run hello-world
 
 **1. Docker Compose faylı yaradın**
 
-Layihə qovluğu yaradın:
+- Layihə qovluğu yaradın:
 ```bash
 mkdir -p ~/sql-server
 cd ~/sql-server
@@ -79,7 +79,7 @@ docker-compose.yml faylı yaradın:
 nano docker-compose.yml
 ```
 
-Aşağıdakı məzmunu əlavə edin:
+- Aşağıdakı məzmunu əlavə edin:
 ```bash
 services:
   sqlserver:
@@ -339,27 +339,28 @@ bash   sudo netstat -tulpn | grep 1433
 sqlALTER LOGIN sa WITH PASSWORD = 'NewStrong@Password456';
 GO
 
-Təhlükəsizlik Tövsiyələri
+## Təhlükəsizlik Tövsiyələri
 
-✅ Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)
-✅ sa istifadəçisi əvəzinə fərqli istifadəçilər yaradın
-✅ Firewall konfiqurasiyasını düzgün təyin edin
-✅ Mütəmadi backup alın
-✅ SQL Server-i güncel saxlayın
-✅ Tailscale istifadə edərək internetdən birbaşa port açmayın
-
-
-Əlavə Resurslar
-
-Docker Documentation
-SQL Server on Linux
-Tailscale Documentation
-SQL Server Best Practices
+**✅ Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)**
+**✅ sa istifadəçisi əvəzinə fərqli istifadəçilər yaradın**
+**✅ Firewall konfiqurasiyasını düzgün təyin edin**
+**✅ Mütəmadi backup alın**
+**✅ SQL Server-i güncel saxlayın**
+**✅ Tailscale istifadə edərək internetdən birbaşa port açmayın**
 
 
-Lisenziya
-Bu sənəd MIT lisenziyası altında paylaşılır.
+## Əlavə Resurslar
 
-Müəllif: Khayyam
+[Linux Ubuntu Desktop](https://ubuntu.com/desktop)
+[Linux Ubuntu Server](https://ubuntu.com/server)
+[Docker Documentation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+[SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server)
+[Tailscale Documentation](https://tailscale.com/kb/1017/install)
+[SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
+
+
+
+Müəllif: Xəyyam Əhmədov
+[Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov) 
 Tarix: Dekabr 2024
 Versiya: 1.0
