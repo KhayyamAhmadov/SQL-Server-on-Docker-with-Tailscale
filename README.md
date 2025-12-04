@@ -269,6 +269,27 @@ SELECT * FROM Users;
 GO
 ```
 
+## Mobil Cihazlardan Qoşulma (Android / iOS)
+
+### SQL Server-ə mobil cihazlardan da qoşulmaq mümkündür. Bunun üçün Android və iOS üçün mövcud SQL tətbiqlərindən istifadə edə bilərsiniz.
+
+**Tətbiq nümunələri:**
+- Android: ```SQL Client```, ```DB Client```, ```SQLTool Pro```, ```RemoDB SQL Client MySQL, MsSQL```
+- iOS: ```DB Client```, ```DBeaver Mobile```
+
+**Qoşulma məlumatları:**
+
+- Server: Tailscale IP (məs.: 100.64.x.x)
+
+- Port: 1433
+
+- Username: sa və ya yaratdığınız istifadəçi
+
+- Password: şifrəniz
+
+**Tətbiqdə New Connection → SQL Server seçərək bu məlumatlarla qoşula bilərsiniz.**
+
+
 ## Faydalı Əmrlər
 ### Docker Compose əmrləri 
 - Konteyneri işə salmaq
@@ -443,10 +464,6 @@ GO
 
 
 
-## Müəllif
+---
 
-**Müəllif: Xəyyam Əhmədov [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov)**
-
-**Dekabr 2025**
-
-**Versiya: 1.0**
+**Xəyyam Əhmədov [Linkedin](https://www.linkedin.com/in/x%C9%99yyam-%C9%99hm%C9%99dov)**
