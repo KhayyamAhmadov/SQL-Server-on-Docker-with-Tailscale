@@ -1,4 +1,4 @@
-# SQL Server on Docker with Tailscale - Tam Quraşdırma
+# SQL Server on Docker with Tailscale
 ![Ubuntu](https://img.shields.io/badge/Linux-Ubuntu-orange)
 ![Docker](https://img.shields.io/badge/Docker-Containerization-lightblue)
 ![SQLServer](https://img.shields.io/badge/SQLServer-blue)
