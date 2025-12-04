@@ -476,7 +476,7 @@ GO
 
 - [Tailscale Documentation](https://tailscale.com/kb/1017/install)
 
-[SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
+- [SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
 
 
 ---
