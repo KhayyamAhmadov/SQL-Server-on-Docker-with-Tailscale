@@ -230,7 +230,7 @@ sudo apt install mssql-tools unixodbc-dev
 - Username: username və ya sa
 - Password: təyin etdiyiniz şifrə
 
-- **Fərqli Şəbəkədən (Tailscale ilə)**
+**Fərqli Şəbəkədən (Tailscale ilə)**
 **Qoşulma məlumatları:**
 
 - Host: Tailscale IP (məsələn: 100.64.x.x)
