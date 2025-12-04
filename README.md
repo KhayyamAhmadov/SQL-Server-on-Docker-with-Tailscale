@@ -26,6 +26,7 @@
 - **İnternet bağlantısı**
 - **sudo icazələri**
 
+---
 
 ## Docker Quraşdırılması
 
@@ -68,6 +69,8 @@ sudo systemctl start docker
 ```bash
 sudo docker run hello-world
 ```
+
+---
 
 ## SQL Server Konteynerinin Yaradılması
 
@@ -129,6 +132,8 @@ sudo docker compose logs -f sqlserver
 
 - "SQL Server is now ready for client connections" mesajını gözləyin (10-20 saniyə).
 
+---
+
 ## Tailscale Quraşdırılması
 
 - Tailscale fərqli şəbəkələrdən təhlükəsiz qoşulma üçün istifadə olunur.
@@ -160,6 +165,7 @@ tailscale ip -4
 1. App Store və ya Google Play-dən Tailscale yükləyin
 2. Eyni hesabla giriş edin
 
+---
 
 ## SQL Server İstifadəçi İdarəetməsi
 **SQL Server Management Studio (SSMS) ilə**
@@ -214,7 +220,7 @@ sqlcmd quraşdırın
 sudo apt install mssql-tools unixodbc-dev
 ``` 
 
-# SQL Server-ə qoşulun
+## SQL Server-ə qoşulun
 ```bash
 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Password123'
 ```
@@ -269,6 +275,8 @@ SELECT * FROM Users;
 GO
 ```
 
+---
+
 ## Mobil Cihazlardan Qoşulma (Android / iOS)
 
 ### SQL Server-ə mobil cihazlardan da qoşulmaq mümkündür. Bunun üçün Android və iOS üçün mövcud SQL tətbiqlərindən istifadə edə bilərsiniz.
@@ -289,6 +297,7 @@ GO
 
 **Tətbiqdə New Connection → SQL Server seçərək bu məlumatlarla qoşula bilərsiniz.**
 
+---
 
 ## Faydalı Əmrlər
 ### Docker Compose əmrləri 
@@ -384,6 +393,8 @@ WITH REPLACE;
 GO
 ```
 
+---
+
 ## Firewall Konfiqurasiyası (Lazım olsa)
 - UFW ilə port 1433-ü açın
 ```bash
@@ -394,6 +405,8 @@ sudo ufw reload
 ```bash
 sudo ufw status
 ```
+
+---
 
 # Problemlərin Həlli
 ## Container işləmir
@@ -433,6 +446,8 @@ ALTER LOGIN sa WITH PASSWORD = 'NewStrong@Password456';
 GO
 ```
 
+---
+
 ## Təhlükəsizlik Tövsiyələri
 
 ✅ **Güclü şifrələr istifadə edin (minimum 8 simvol, böyük/kiçik hərf, rəqəm, simvol)**
@@ -447,6 +462,7 @@ GO
 
 ✅ **Tailscale istifadə edərək internetdən birbaşa port açmayın**
 
+---
 
 ## Əlavə Resurslar
 
@@ -461,7 +477,6 @@ GO
 [Tailscale Documentation](https://tailscale.com/kb/1017/install)
 
 [SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
-
 
 
 ---
