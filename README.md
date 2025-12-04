@@ -4,7 +4,8 @@
 ![SQLServer](https://img.shields.io/badge/SQLServer-blue)
 ![TailScale](https://img.shields.io/badge/TailScale-yellow)
 
-![docker](https://github.com/user-attachments/assets/20bb9635-f460-463d-bdd4-4bcadbf0955f)
+![docker](https://github.com/user-attachments/assets/20bb9635-f460-463d-bdd4-4bcadbf0955f) <img width="251" height="201" alt="images" src="https://github.com/user-attachments/assets/f1d50626-bf3b-4312-97f4-09c0c1a90387" />
+
 
 ### Bu sənəd Ubuntu üzərində Docker konteynerində SQL Server-in quraşdırılması və Tailscale vasitəsilə müxtəlif şəbəkələrdən təhlükəsiz şəkildə qoşulma prosesini izah edir. Mobil cihazlardan qoşulmaq da mümkündür.
 
