@@ -466,15 +466,15 @@ GO
 
 ## Əlavə Resurslar
 
-[Linux Ubuntu Desktop](https://ubuntu.com/desktop)
+- [Linux Ubuntu Desktop](https://ubuntu.com/desktop)
 
-[Linux Ubuntu Server](https://ubuntu.com/server)
+- [Linux Ubuntu Server](https://ubuntu.com/server)
 
-[Docker Documentation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+- [Docker Documentation](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
-[SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server)
+- [SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server)
 
-[Tailscale Documentation](https://tailscale.com/kb/1017/install)
+- [Tailscale Documentation](https://tailscale.com/kb/1017/install)
 
 [SQL Server Best Practices](https://learn.microsoft.com/en-us/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database?view=sql-server-ver17)
 
