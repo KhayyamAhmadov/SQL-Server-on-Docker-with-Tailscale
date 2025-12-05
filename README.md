@@ -7,7 +7,7 @@
 <img width="2816" height="1504" alt="Gemini_Generated_Image_d4munjd4munjd4mu" src="https://github.com/user-attachments/assets/8f53cac9-e0c2-4ebb-8628-d24ce1366862" />
 
 
-### Bu sənəd Ubuntu üzərində Docker konteynerində SQL Server-in quraşdırılması və Tailscale vasitəsilə müxtəlif şəbəkələrdən təhlükəsiz şəkildə qoşulma prosesini izah edir. Mobil cihazlardan qoşulmaq da mümkündür.
+### Bu repo Ubuntu üzərində Docker konteynerində SQL Server-in quraşdırılması və Tailscale vasitəsilə müxtəlif şəbəkələrdən təhlükəsiz şəkildə qoşulma prosesini izah edir. Mobil cihazlardan qoşulmaq da mümkündür.
 
 ## 📋 İçindəkilər:
 
